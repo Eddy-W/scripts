@@ -1,5 +1,0 @@
-visualize city statistic data on china map by Kartograph lib
-
-Kartograph是一个用于创建无人操控、交互式地图（如：谷歌地图）的框架。它由两个库组成：一个是Python库，从形式函数或Post GIS中提出矢量地图，并把它们转换成SVG格式；另一个是JavaScript库，将这些SVG格式转换成交互式地图。
-
-如果已经是SVG格式（如：Adobe Illustrator中的任何绘图都可以转换成SVG格式），只要通过JavaScript库的帮助就可以进行转换了。JS库使用jQuery和Raphaël，就能以CSS类型格式输出，并且提供一个很完善的文档。

@@ -1,8 +1,0 @@
-[{"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 41.0, "Rape2010": 31.0,   "Murder2010": 4.0, "Murder2011": 4.0, "ViolentCrime2010": 596.0, "ViolentCrime2011": 518.0, "Population": 180105}, 
-{"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 24.0, "Rape2010": 27.0,   "Murder2010": 10.0, "Murder2011": 18.0, "ViolentCrime2010": 808.0, "ViolentCrime2011": 695.0, "Population": 251106},
- {"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 135.0, "Rape2010": 129.0,   "Murder2010": 9.0, "Murder2011": 4.0, "ViolentCrime2010": 1191.0, "ViolentCrime2011": 1172.0, "Population": 291826}, 
-{"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 28.0, "Rape2010": 33.0,   "Murder2010": 2.0, "Murder2011": 2.0, "ViolentCrime2010": 330.0, "ViolentCrime2011": 335.0, "Population": 236123},
- {"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 8.0, "Rape2010": 12.0,   "Murder2010": 1.0, "Murder2011": 1.0, "ViolentCrime2010": 92.0, "ViolentCrime2011": 79.0, "Population": 208453},
- {"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 20.0, "Rape2010": 25.0,   "Murder2010": 4.0, "Murder2011": 6.0, "ViolentCrime2010": 513.0, "ViolentCrime2011": 535.0, "Population": 226721}, 
-{"City": "北京 ", "ll": [116.4075,39.90403], "Rape2011": 77.0, "Rape2010": 60.0,  "Murder2010": 8.0, "Murder2011": 5.0, "ViolentCrime2010": 855.0, "ViolentCrime2011": 877.0, "Population": 439041},
-{"City": "北京", "ll": [116.4075,39.90403], "Rape2011": 100.0, "Rape2010": 90.0,  "Murder2010": 38.0, "Murder2011": 40.0, "ViolentCrime2010": 2919.0, "ViolentCrime2011": 2855.0, "Population": 594833}]
