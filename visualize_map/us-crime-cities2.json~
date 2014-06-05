@@ -1,0 +1,4 @@
+[{"City": "Beijing", "ll": [116.4075 39.90403], "Rape2011": 4100.0, "Rape2010": 31.0, "State": "ALABAMA", "Murder2010": 4.0, "Murder2011": 4.0, "ViolentCrime2010": 596.0, "ViolentCrime2011": 518.0, "Population": 180105}, 
+{"City": "MOBILE", "ll": [104.0665 37.57227], "Rape2011": 24.0, "Rape2010": 27.0, "State": "ALABAMA", "Murder2010": 10.0, "Murder2011": 18.0, "ViolentCrime2010": 808.0, "ViolentCrime2011": 695.0, "Population": 251106},
+{"City": "ANCHORAGE", "ll": [-149.90028, 61.21806], "Rape2011": 135.0, "Rape2010": 129.0, "State": "ALASKA", "Murder2010": 9.0, "Murder2011": 4.0, "ViolentCrime2010": 1191.0, "ViolentCrime2011": 1172.0, "Population": 291826}, 
+{"City": "CHANDLER    ", "ll": [-111.84125, 33.30616], "Rape2011": 28.0, "Rape2010": 33.0, "State": "ARIZONA", "Murder2010": 2.0, "Murder2011": 2.0, "ViolentCrime2010": 330.0, "ViolentCrime2011": 335.0, "Population": 236123}]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta content="text/html; charset=utf-8" http-equiv="content-type">
+   <title>Animated Symbols</title>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <meta content="" name="description">
+   <meta content="" name="author">
+
+   <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+   <!-- Le fav and touch icons -->
+   <link href="/favicon.ico" rel="shortcut icon">
+   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="js/raphael-2.1.0.min.js"></script>
+   <script type="text/javascript" src="js/kartograph.min.js"></script>
+   <script type="text/javascript" src="js/chroma.min.js"></script>
+      
+      <script type="text/javascript">
+         $(function() {
+            var map, c, scale, updateMap, symbols,
+               key = 'imp',
+               maxRad = 30;
+
+            c = $('#map');
+            c.height(c.width()*.65);
+            map = window.m = $K.map('#map');
+
+            map.loadMap('map-china.svg', function() {
+               map.addLayer('china', {
+                  styles: {
+                     fill: '#dfdcdc',
+                     stroke: '#fff'
+                  }
+               });
+
+               $.getJSON('regionjs.json', function(crimeCities) {
+
+                  crimeCities = crimeCities.sort(function(a,b) {return a.imp - b.imp;});
+
+                   
+
+                  scale = $K.scale.linear(crimeCities, key);
+                  colscale = chroma.scale(chroma.brewer.PiYG.slice().reverse());
+
+                  function symbolAttrs(d) {
+                     return {
+                        r: Math.sqrt(scale(d[key]))*maxRad,
+                        stroke: '#fff',
+                        'stroke-width': scale(d[key])*1,
+                        fill: colscale(scale(d[key])),
+                        'fill-opacity': 0.5
+                     };
+                  }
+
+                  symbols = map.addSymbols({
+                     type: $K.Bubble,
+                     data: crimeCities,
+                     location: function(d) { return d.pos},
+                     attrs: symbolAttrs,
+                     title: function(d) { return $.trim(d.city)+' ('+Math.round(d[key])+')'; }
+                  });
+
+                  updateMap = function() {
+                     key = $('.dataset.btn-primary').data('val');
+                     scale = $K.scale.linear(crimeCities, key);
+                     symbols.update({
+                        attrs: symbolAttrs,
+                        title: function(d) { return $.trim(d.city)+' ('+d[key]+')'; }
+                     }, 500, 'backOut');
+                  }
+               });
+            });
+
+            $('.btn').click(function(event) {
+               var tgt = $(event.target), par = tgt.parent();
+               $('.btn', par).removeClass('btn-primary');
+               tgt.addClass('btn-primary');
+               updateMap();
+            });
+         });
+   </script>
+   </head>
+   <body>
+       <div style="position:relative">
+            <div id="map"></div>
+            <div style="position:absolute;bottom:0px;left:20px;z-index:10">
+               
+                <div class="btn-group" style="display:inline-block">
+                    <button class="dataset btn-large btn btn-primary" data-val="imp">展示</button>
+                    <button class="dataset btn-large btn" data-val="clk">点击</button>
+                    <button class="dataset btn-large btn" data-val="ctr">点击率</button>
+                </div>
+                <div class="btn-group" style="display:none">
+                    <button class="year btn btn-primary">2011</button>
+                    <button class="year btn">2010</button>
+                </div>
+                <div class="btn-group" style="display:none">
+                    <button class="type btn" data-val="" data-maxrad="50">Quantity</button>
+                    <button class="type btn btn-primary" data-val="Rate" data-maxrad="40">Density</button>
+                </div>
+            </div>
+        </div>
+         
+    </body>
+</html>
+
+
+
+
