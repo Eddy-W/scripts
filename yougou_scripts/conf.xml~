@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<root>
+    <conditions>
+        <product>ifc</product>
+        <bid_db>ifc</bid_db>
+        <task_name>cpm_20140609093001</task_name>
+        <!--tasktype[1:pv-uv, 2: evalute retargeting demo traffic, 3: evaluting cpm, 4:media overlap, 5:order report-->
+        <tasktype>1</tasktype>
+        <advertisers>
+            <advertiser id='32' name='yougou'>
+        	<track_product>idigger</track_product>
+        	<track_db>mso</track_db>
+        	<track_adid>436</track_adid>
+        	<sitecode>T-000436-01</sitecode>
+        	<tracksource_key>utm_source</tracksource_key>
+        	<tracksource_value>AD_kbFCWgsSI</tracksource_value>
+        	<start_biddate>2014-05-09</start_biddate>
+        	<end_biddate>2014-05-09</end_biddate>
+        	<start_trackdate>2014-05-09</start_trackdate>
+        	<end_trackdate>2014-05-09</end_trackdate>
+        	<solutionids>1785,1784,257,256</solutionids>
+        	<exchangeids>1,2,3,4,5</exchangeids>
+        	<adslot_sizes>728x90,300x250,336x280,970x90,200x200,250x250,468x60,160x600728x90,300x250,336x280,970x90,200x200,250x250,468x60,160x600</adslot_sizes>
+        	<media_domain>www.weather.com.cn</media_domain>
+	    </advertiser>
+	</advertisers>
+    </conditions>
+    <system>
+        <ReportOutDir_hdfs>/user/group_ifc/data4wt</ReportOutDir_hdfs>
+        <WorkBaseDir_hdfs>/user/group_dataanalysis/yougou_dps/order_parse</WorkBaseDir_hdfs>
+        <WorkLocalDir>/home/tonydeng/yougou/temp</WorkLocalDir>
+    </system>
+    <email>
+        <switch_on>1</switch_on>
+        <sender>wentao_wang</sender>
+        <sender_pass>2238681Xw</sender_pass>
+	<subject>yougou_dsp_performance</subject>
+        <body_content>\n\nDear all\n\n附件为%s优购DSP报表, 有任何疑问请及时和我联系。\n此邮件为系统自动发送邮件，请勿回复，谢谢!\n\n\n谢谢\n王文涛\n</body_content>
+        <recipients>xiaolu_yan@allyes.com,sarah_yong@allyes.com</recipients>
+        <cc_recipients>hu_jia@allyes.com,elan_gu@allyes.com,tony_deng@allyes.com,brian_xu@allyes.com,wentao_wang@allyes.com</cc_recipients>
+        <attchment_filename>yougou_dps_report_%s.xls</attchment_filename>
+    </email>
+
+</root>
+
